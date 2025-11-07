@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet CoreControl</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/dracula.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/groovy.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Figtree', sans-serif;
+            background-image: url('background.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        pre, code, .font-mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        body::-webkit-scrollbar {
+            display: none;
+        }
+        body {
+            scrollbar-width: none;
+        }
+        body {
+            -ms-overflow-style: none;
+        }
+
+        pre code::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        pre code::-webkit-scrollbar-track {
+            background: #1e1e1e;
+            border-radius: 4px;
+        }
+        pre code::-webkit-scrollbar-thumb {
+            background: #4a4a4a;
+            border-radius: 4px;
+        }
+        pre code::-webkit-scrollbar-thumb:hover {
+            background: #5a5a5a;
+        }
+    </style>
+</head>
+<body class="text-gray-200 overflow-y-auto">
+
+<main class="relative flex flex-col items-center w-full max-w-2xl mx-auto p-4 py-10">
+
+    <div class="flex justify-center mb-6">
+        <img src="logo.png"
+             alt="CoreControl Logo"
+             class="w-48">
+    </div>
+
+    <h1 class="text-3xl md:text-4xl font-bold text-center mb-2">
+        <span class="text-black">Meet the CoreControl Library</span>
+    </h1>
+    <p class="text-lg md:text-xl text-center text-gray-800 mb-8">
+        Docs website coming soon.
+    </p>
+
+    <a href="https://github.com/CoreControlLib/CoreControlQuickstart"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="inline-flex items-center justify-center bg-gray-500 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg text-lg transition duration-200 transform hover:scale-105 shadow-lg mb-6">
+        <span>Get the Quickstart Repo</span>
+        <svg class="w-5 h-5 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+        </svg>
+    </a>
+
+    <p class="text-center text-gray-800 mb-4">
+        Or add it to an existing project like this:
+    </p>
+
+    <div class="w-full rounded-t-lg px-4 py-2" style="background-color: #282a36;">
+        <span class="font-mono text-sm text-white">TeamCode/build.gradle</span>
+    </div>
+
+    <div class="relative w-full rounded-b-lg shadow-inner" style="background-color: #3a3c4a;">
+
+        <pre class="px-4 py-4 overflow-x-auto" style="background-color: #3a3c4a;"><code class="language-groovy" id="code-snippet">apply from: '../build.common.gradle'
+apply from: '../build.dependencies.gradle'
+
+android {
+    namespace = 'org.firstinspires.ftc.teamcode'
+
+    packagingOptions {
+        jniLibs.useLegacyPackaging true
+    }
+}
+
+repositories {
+    maven {
+        url "https://corecontrollib.github.io/Release/"
+    }
+}
+
+dependencies {
+    implementation project(':FtcRobotController')
+    implementation 'com.andreidurlea:corecontrol:1.1.0'
+}</code></pre>
+    </div>
+
+</main>
+
+</body>
+</html>
