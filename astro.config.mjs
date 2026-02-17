@@ -25,7 +25,7 @@ export default defineConfig({
 			head: [],
 			favicon: '/favicon.png',
 			social: [
-				{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' },
+				{ icon: 'github', label: 'GitHub', href: 'https://github.com/CoreControlLib/CoreControlQuickstart' },
 				{ icon : 'instagram', label: 'Instagram', href: 'https://www.instagram.com/corecontrollib/' }
 			],
 			sidebar: [
